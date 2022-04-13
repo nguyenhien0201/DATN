@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile.Views.InfoForm">
+    <ContentView.Content>
+        <Frame  BackgroundColor="White" 
+                VerticalOptions="Center" 
+                Margin="20,0,20,5"
+                BorderColor="WhiteSmoke"
+                HasShadow="False">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"  />
+                    <RowDefinition Height="*"  />
+                    <RowDefinition Height="*"  />
+                    <RowDefinition Height="*"  />
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Column="0">
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Start">
+                        <Label Text="Giới tính:"
+                                FontSize="14" TextColor="Gray"/>
+                        <Label Text="{Binding Path=Gender}"
+                               FontSize="17"
+                               TextColor="Black"/>
+
+                    </StackLayout>
+                    <BoxView Margin="0,5" HeightRequest="1" Color="WhiteSmoke"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1">
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Start">
+                        <Label Text="Tuổi:"
+                                FontSize="14" TextColor="Gray"/>
+                        <Label Text="{Binding Path=Age}"
+                               FontSize="17"
+                               TextColor="Black"/>
+                    </StackLayout>
+                    <BoxView Margin="0,5" HeightRequest="1" Color="WhiteSmoke"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Start">
+                        <Label Text="Số điện thoại:"
+                                FontSize="14" TextColor="Gray"/>
+                        <Label Text="{Binding Path=PhoneNumber}"
+                               FontSize="17"
+                               TextColor="Black"/>
+                    </StackLayout>
+                    <BoxView Margin="0,5" HeightRequest="1" Color="WhiteSmoke"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.ColumnSpan="2">
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Start">
+                        <Label Text="Email:"
+                                FontSize="14" TextColor="Gray"/>
+                        <Label Text="{Binding Path=Email}"
+                               FontSize="17"
+                               TextColor="Black"/>
+                    </StackLayout>
+                    <BoxView Margin="0,5" HeightRequest="1" Color="WhiteSmoke"/>
+                </StackLayout>
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="2">
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Start">
+                        <Label Text="Địa chỉ:"
+                                FontSize="14" TextColor="Gray"/>
+                        <Label Text="{Binding Path=Address}"
+                               FontSize="17"
+                               TextColor="Black"/>
+                    </StackLayout>
+                    <BoxView Margin="0,5" HeightRequest="1" Color="WhiteSmoke"/>
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

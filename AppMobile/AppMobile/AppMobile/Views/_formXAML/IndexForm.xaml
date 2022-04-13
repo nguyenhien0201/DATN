@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile.Views.IndexForm">
+    <ContentView.Content>
+        <StackLayout BackgroundColor="White" Spacing="0" VerticalOptions="Center">
+            <BoxView Color="WhiteSmoke"
+                     HeightRequest="1"/>
+
+            <Grid RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="50" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"  />
+
+                </Grid.RowDefinitions>
+                <!--icon-->
+                <Image Grid.Column="0" 
+                       HeightRequest="20"
+                       WidthRequest="20"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center">
+                    <Image.Source>
+                        <FileImageSource File="index.png" />
+                    </Image.Source>
+                </Image>
+                <!--ten chi so-->
+                <StackLayout Grid.Column="1" Spacing="0"
+                             VerticalOptions="Center" >
+                    <Label Text="{Binding Path=Name}"
+                            Font="Bold, 17"
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+
+                    <Label Text="{Binding Path=WarningText}"
+                           FontSize="13"
+                           TextColor="Gray"
+                           VerticalOptions="Center" />
+                </StackLayout>
+                <!--gia tri chi so-->
+                <Frame MinimumHeightRequest="50" Grid.Column="2"
+                       CornerRadius="100"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Margin="0,5" 
+                        BackgroundColor="{Binding Color}">
+                    
+                        <Label Text="{Binding Path=Value}" TextColor="White"
+                               Font="Bold, 17" 
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                </Frame>
+                <Label  Grid.Column="3" Margin="0"
+                        Text="{Binding Path=Unit, StringFormat='({0})'}"
+                        VerticalOptions="Center"
+                        TextColor="Gray"
+                        HorizontalOptions="Start"/>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

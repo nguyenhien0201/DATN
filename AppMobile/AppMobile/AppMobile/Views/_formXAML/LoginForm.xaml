@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile.Views.Home.LoginForm"
+             xmlns:scr="clr-namespace:System">
+    
+    <ContentView.Content>
+        <!--<StackLayout Orientation="Vertical" Padding="30" Spacing="40" VerticalOptions="Center">
+            <BoxView HeightRequest="40"/>
+            <Frame BackgroundColor="#BF043055" HasShadow="False">
+                <StackLayout Orientation="Vertical" Spacing="0" >
+                    <Label Text="Username" />
+                    <Entry x:Name="UserName" Text="{Binding Path=UserName}"   
+                           PlaceholderColor="White" HeightRequest="60"   
+                           TextColor="White"/>
+                    <Label Text="Password" />
+                    <Entry x:Name="Password" Text="{Binding Path=Password}"    
+                           PlaceholderColor="White" HeightRequest="60"   
+                           IsPassword="True"  
+                           TextColor="White"/>
+                </StackLayout>
+            </Frame>
+            <Button Text="Đăng nhập" TextColor="White" 
+                    Clicked="Login_Clicked"
+                    FontSize="Medium" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5" />
+            
+        </StackLayout>-->
+        <Grid x:Name="MainContent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"  />
+                <RowDefinition />
+                <RowDefinition Height="170" />
+            </Grid.RowDefinitions>
+            <Image Margin="40,30"
+                   Source="logo.jpg"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HeightRequest="180"
+                    WidthRequest="180" />
+            <StackLayout Grid.Row="1" 
+                         VerticalOptions="Center" 
+                         Margin="40,30" 
+                         Orientation="Vertical" >
+                <Label Text="Tài khoản" />
+                <Entry Placeholder="" 
+                       Text="{Binding Path=UserName}" />
+                <Label Text="Mật khẩu" />
+                <Entry IsPassword="True" 
+                       Placeholder=""
+                       Text="{Binding Path=Password}" />
+
+            </StackLayout>
+            <StackLayout Grid.Row="2" 
+                         VerticalOptions="Center" 
+                         Margin="40,30" >
+                <Button Text="Đăng nhập" TextColor="White" 
+                        Clicked="Login_Clicked"
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="Small"
+                        BackgroundColor="#2C50CA" />
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

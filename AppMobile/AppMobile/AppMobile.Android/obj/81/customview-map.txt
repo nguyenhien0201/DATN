@@ -1,0 +1,13 @@
+adaptive-icon;obj\\81\res\mipmap-anydpi-v26\icon.xml
+adaptive-icon;obj\\81\res\mipmap-anydpi-v26\icon_round.xml
+android.support.design.widget.TabLayout;obj\\81\res\layout\tabbar.xml
+android.support.v7.widget.Toolbar;obj\\81\res\layout\toolbar.xml
+background;obj\\81\res\mipmap-anydpi-v26\icon.xml
+background;obj\\81\res\mipmap-anydpi-v26\icon_round.xml
+color;obj\\81\res\values\colors.xml
+foreground;obj\\81\res\mipmap-anydpi-v26\icon.xml
+foreground;obj\\81\res\mipmap-anydpi-v26\icon_round.xml
+item;obj\\81\res\values\styles.xml
+resources;obj\\81\res\values\colors.xml
+resources;obj\\81\res\values\styles.xml
+style;obj\\81\res\values\styles.xml
